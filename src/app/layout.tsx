@@ -15,6 +15,7 @@ const quicksand = Quicksand({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kyara2005.github.io/BeautyNails"),
   title: "Beauty Nails | Nail Studio en Quito",
   description:
     "Nail studio en Quito. Manicura y pedicura en el Centro Histórico — San Blas. Previa reserva.",

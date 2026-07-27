@@ -1,18 +1,19 @@
 import Image from "next/image";
+import { assetPath } from "@/lib/paths";
 
 const gallery = [
   {
-    src: "/gallery-1.png",
+    src: assetPath("/gallery-1.png"),
     alt: "Nail art con detalles en oro, rosa y azul",
     span: "sm:col-span-2 sm:row-span-2",
   },
   {
-    src: "/gallery-2.png",
+    src: assetPath("/gallery-2.png"),
     alt: "Manicura con flores 3D y textura de concha",
     span: "",
   },
   {
-    src: "/gallery-3.png",
+    src: assetPath("/gallery-3.png"),
     alt: "Manicura nude con estrellas azules y puntos negros",
     span: "",
   },

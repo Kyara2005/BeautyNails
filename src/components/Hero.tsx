@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { siteConfig } from "@/lib/site";
+import { assetPath } from "@/lib/paths";
 
 export function Header() {
   return (
@@ -72,7 +73,7 @@ export function Hero() {
       <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center">
         <div className="animate-float animate-fade-up mb-8">
           <Image
-            src="/logo.png"
+            src={assetPath("/logo.png")}
             alt="Beauty Nails logo"
             width={280}
             height={280}

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { siteConfig } from "@/lib/site";
+import { assetPath } from "@/lib/paths";
 
 const links = [
   {
@@ -39,7 +40,7 @@ export function Linktree() {
 
       <div className="relative z-10 mx-auto max-w-md text-center">
         <Image
-          src="/logo.png"
+          src={assetPath("/logo.png")}
           alt="Beauty Nails"
           width={120}
           height={120}
