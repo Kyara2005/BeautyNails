@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 import { assetPath } from "@/lib/paths";
 
@@ -6,9 +7,9 @@ export function Header() {
   return (
     <header className="absolute inset-x-0 top-0 z-20">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5 sm:px-8">
-        <a href="#inicio" className="font-display text-lg font-bold tracking-wide text-ink">
+        <Link href="/" className="font-display text-lg font-bold tracking-wide text-ink">
           Beauty Nails
-        </a>
+        </Link>
         <ul className="hidden items-center gap-8 text-sm font-medium text-ink-muted md:flex">
           <li>
             <a href="#servicios" className="transition-colors hover:text-crimson">
@@ -31,9 +32,9 @@ export function Header() {
             </a>
           </li>
           <li>
-            <a href="#contacto" className="transition-colors hover:text-crimson">
-              Contacto
-            </a>
+            <Link href="/tree" className="transition-colors hover:text-crimson">
+              Enlaces
+            </Link>
           </li>
         </ul>
         <a

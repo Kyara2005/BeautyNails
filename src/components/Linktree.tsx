@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 import { assetPath } from "@/lib/paths";
 
@@ -25,10 +26,7 @@ const links = [
 
 export function Linktree() {
   return (
-    <section
-      id="contacto"
-      className="section-pad relative overflow-hidden bg-gradient-to-b from-blush-deep/50 via-blush/60 to-pink-soft/30"
-    >
+    <section className="hero-atmosphere relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-5 py-16">
       <div
         className="polish-smear right-[-10%] top-10 h-56 w-72 bg-crimson/25"
         aria-hidden
@@ -38,17 +36,25 @@ export function Linktree() {
         aria-hidden
       />
 
-      <div className="relative z-10 mx-auto max-w-md text-center">
+      <div className="relative z-10 mx-auto w-full max-w-md text-center">
+        <Link
+          href="/"
+          className="mb-8 inline-block text-sm font-medium text-ink-muted transition-colors hover:text-crimson"
+        >
+          ← Beauty Nails
+        </Link>
+
         <Image
           src={assetPath("/logo.png")}
           alt="Beauty Nails"
-          width={120}
-          height={120}
-          className="mx-auto h-24 w-24 rounded-full object-cover shadow-[0_12px_30px_rgba(196,59,78,0.2)]"
+          width={140}
+          height={140}
+          priority
+          className="mx-auto h-28 w-28 rounded-full object-cover shadow-[0_12px_30px_rgba(196,59,78,0.2)]"
         />
-        <h2 className="mt-6 font-display text-3xl font-bold text-ink sm:text-4xl">
+        <h1 className="mt-6 font-display text-3xl font-bold text-ink sm:text-4xl">
           Beauty Nails
-        </h2>
+        </h1>
         <p className="mt-2 text-base font-light text-ink-muted">
           {siteConfig.tagline} · Previa reserva
         </p>
@@ -95,6 +101,11 @@ export function Footer() {
       <p className="font-display text-sm font-semibold text-ink">Beauty Nails</p>
       <p className="mt-1 text-sm font-light text-ink-muted">
         Centro Histórico — San Blas, Quito · Martes a sábado 9:30 AM – 6:00 PM
+      </p>
+      <p className="mt-3">
+        <Link href="/tree" className="text-sm font-medium text-rose transition-colors hover:text-crimson">
+          Enlaces
+        </Link>
       </p>
       <p className="mt-4 text-xs text-ink-muted/80">
         © {new Date().getFullYear()} Beauty Nails. Todos los derechos reservados.

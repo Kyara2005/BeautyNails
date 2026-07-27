@@ -26,8 +26,8 @@
   --color-ink: var(--ink);
   --color-ink-muted: var(--ink-muted);
   --color-cream: var(--cream);
-  --font-sans: var(--font-outfit);
-  --font-display: var(--font-quicksand);
+  --font-sans: var(--font-raleway);
+  --font-display: var(--font-raleway);
 }
 
 * {
@@ -41,7 +41,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-outfit), system-ui, sans-serif;
+  font-family: var(--font-raleway), system-ui, sans-serif;
   overflow-x: hidden;
 }
 

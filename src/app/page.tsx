@@ -3,7 +3,7 @@ import { Services } from "@/components/Services";
 import { Gallery } from "@/components/Gallery";
 import { Hours } from "@/components/Hours";
 import { Testimonials } from "@/components/Testimonials";
-import { Linktree, Footer } from "@/components/Linktree";
+import { Footer } from "@/components/Linktree";
 
 export default function Home() {
   return (
@@ -15,7 +15,6 @@ export default function Home() {
         <Gallery />
         <Hours />
         <Testimonials />
-        <Linktree />
       </main>
       <Footer />
     </>
