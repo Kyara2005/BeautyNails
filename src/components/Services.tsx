@@ -28,7 +28,6 @@ const services = [
     highlights: [
       "Extensiones ligeras y resistentes",
       "Dura de 3 – 4 semanas",
-      "Ideal si quieres extensión con un acabado natural y ligero",
       "Permite elegir el largo y forma de las uñas",
       "Recomendado para personas que sufren alergias",
     ],
