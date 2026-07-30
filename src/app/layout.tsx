@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Beauty Nails | Nail Studio en Quito",
     description:
       "Manicura y pedicura en el Centro Histórico de Quito. Previa reserva.",
-    images: ["/logo.png"],
+    images: ["/brand/logo.png"],
   },
 };
 

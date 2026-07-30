@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site";
-import { assetPath } from "@/lib/paths";
+import { assetPath, assets } from "@/lib/paths";
 
 export const metadata: Metadata = {
   title: "Enlaces | Beauty Nails",
@@ -52,7 +52,7 @@ export default function TreePage() {
           </Link>
 
           <Image
-            src={assetPath("/logo.png")}
+            src={assetPath(assets.brand.logo)}
             alt="Beauty Nails"
             width={140}
             height={140}

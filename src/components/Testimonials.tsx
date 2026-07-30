@@ -19,15 +19,16 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="testimonios" className="section-pad bg-cream">
+    <section id="testimonios" className="section-pad scrapbook-bg">
       <div className="mx-auto max-w-5xl">
         <div className="mx-auto max-w-xl text-center">
           <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-rose">
             Clientas felices
           </p>
-          <h2 className="mt-3 font-display text-4xl font-bold text-ink sm:text-5xl">
+          <h2 className="sticker-title mt-3 font-display text-4xl font-bold sm:text-5xl">
             Reseñas
           </h2>
+          <div className="wave-accent mx-auto mt-4" aria-hidden />
           <p className="mt-4 text-lg font-light text-ink-muted">
             Lo que dicen quienes ya visitaron Beauty Nails.
           </p>

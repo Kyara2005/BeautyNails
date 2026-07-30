@@ -1,47 +1,49 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import { siteConfig } from "@/lib/site";
-import { assetPath } from "@/lib/paths";
+import { assetPath, assets } from "@/lib/paths";
 
 export function Header() {
   return (
-    <header className="absolute inset-x-0 top-0 z-20">
+    <header className="absolute inset-x-0 top-0 z-30">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5 sm:px-8">
-        <Link href="/" className="font-display text-lg font-bold tracking-wide text-ink">
+        <Link
+          href="/"
+          className="font-display text-lg font-bold tracking-wide text-cream drop-shadow-[0_2px_8px_rgba(61,36,48,0.35)]"
+        >
           Beauty Nails
         </Link>
-        <ul className="hidden items-center gap-8 text-sm font-medium text-ink-muted md:flex">
+        <ul className="hidden items-center gap-6 text-sm font-medium text-cream/90 lg:flex">
           <li>
-            <a href="#servicios" className="transition-colors hover:text-crimson">
+            <a href="#disenos" className="transition-opacity hover:opacity-100 opacity-90">
+              Diseños
+            </a>
+          </li>
+          <li>
+            <a href="#servicios" className="transition-opacity hover:opacity-100 opacity-90">
               Servicios
             </a>
           </li>
           <li>
-            <a href="#galeria" className="transition-colors hover:text-crimson">
+            <a href="#tratamientos" className="transition-opacity hover:opacity-100 opacity-90">
+              Tratamientos
+            </a>
+          </li>
+          <li>
+            <a href="#galeria" className="transition-opacity hover:opacity-100 opacity-90">
               Galería
             </a>
           </li>
           <li>
-            <a href="#horarios" className="transition-colors hover:text-crimson">
-              Horarios
+            <a href="#reserva" className="transition-opacity hover:opacity-100 opacity-90">
+              Reserva
             </a>
-          </li>
-          <li>
-            <a href="#testimonios" className="transition-colors hover:text-crimson">
-              Reseñas
-            </a>
-          </li>
-          <li>
-            <Link href="/tree" className="transition-colors hover:text-crimson">
-              Enlaces
-            </Link>
           </li>
         </ul>
         <a
-          href={siteConfig.links.whatsapp}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded-2xl bg-crimson px-4 py-2.5 text-sm font-semibold text-cream shadow-[0_8px_24px_rgba(196,59,78,0.28)] transition-transform duration-300 hover:-translate-y-0.5"
+          href="#reserva"
+          className="rounded-2xl bg-cream px-4 py-2.5 text-sm font-semibold text-crimson shadow-[0_8px_24px_rgba(61,36,48,0.2)] transition-transform duration-300 hover:-translate-y-0.5"
         >
           Reservar
         </a>
@@ -50,61 +52,78 @@ export function Header() {
   );
 }
 
+function PaintedNails() {
+  const colors = ["#c43b4e", "#e891a3", "#a67b82", "#f0b4c0", "#c45c6e"];
+
+  return (
+    <div className="painted-nails" aria-hidden>
+      {colors.map((color, i) => (
+        <span
+          key={color}
+          className="painted-nail"
+          style={
+            {
+              "--nail-color": color,
+              "--nail-delay": `${0.35 + i * 0.28}s`,
+              "--nail-x": `${(i - 2) * 22}px`,
+            } as CSSProperties
+          }
+        />
+      ))}
+    </div>
+  );
+}
+
 export function Hero() {
   return (
-    <section
-      id="inicio"
-      className="hero-atmosphere relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-5 pb-16 pt-28 text-center"
-    >
-      <div
-        className="polish-smear animate-smear left-[-8%] top-[18%] h-48 w-72 bg-rose/40 sm:h-64 sm:w-96"
-        aria-hidden
+    <section id="inicio" className="hero-fullbleed relative flex min-h-[100svh] items-end overflow-hidden">
+      <Image
+        src={assetPath(assets.hero.nails)}
+        alt="Manicura Beauty Nails en tonos rosa"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-[center_35%]"
       />
-      <div
-        className="polish-smear right-[-6%] top-[28%] h-40 w-56 bg-crimson/35 sm:h-56 sm:w-80"
-        style={{ animationDelay: "1.5s" }}
-        aria-hidden
-      />
-      <div
-        className="polish-smear bottom-[12%] left-[20%] h-32 w-48 bg-pink/45"
-        style={{ animationDelay: "3s" }}
-        aria-hidden
-      />
+      <div className="hero-fullbleed-veil pointer-events-none absolute inset-0" aria-hidden />
 
-      <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center">
-        <div className="animate-float animate-fade-up mb-8">
+      <span className="sparkle sparkle-a !top-[22%] !left-[12%]" aria-hidden />
+      <span className="sparkle sparkle-b !bg-cream" aria-hidden />
+
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-16 pt-32 text-center sm:px-8 sm:pb-20">
+        <div className="animate-float animate-fade-up mx-auto mb-6">
           <Image
-            src={assetPath("/logo.png")}
+            src={assetPath(assets.brand.logo)}
             alt="Beauty Nails logo"
-            width={280}
-            height={280}
+            width={220}
+            height={220}
             priority
-            className="h-44 w-44 rounded-full object-cover shadow-[0_20px_50px_rgba(196,59,78,0.22)] sm:h-56 sm:w-56"
+            className="mx-auto h-36 w-36 rounded-full object-cover ring-4 ring-cream/70 shadow-[0_20px_50px_rgba(61,36,48,0.35)] sm:h-44 sm:w-44"
           />
         </div>
 
-        <h1 className="animate-fade-up-delay font-display text-5xl font-bold leading-[1.05] tracking-tight text-ink sm:text-7xl">
+        <h1 className="animate-fade-up-delay font-display text-5xl font-bold leading-[1.05] tracking-tight text-cream sm:text-7xl">
           Beauty Nails
         </h1>
-
-        <p className="animate-fade-up-delay-2 mt-5 max-w-md text-lg font-light leading-relaxed text-ink-muted sm:text-xl">
-          Manicura y pedicura con detalle en el corazón de Quito. Previa reserva.
+        <span className="wave-accent-light mt-4" aria-hidden />
+        <p className="animate-fade-up-delay-2 mx-auto mt-5 max-w-md text-lg font-light leading-relaxed text-cream/90 sm:text-xl">
+          Manicura y pedicura con detalle en el corazón de Quito.
         </p>
 
-        <div className="animate-fade-up-delay-2 mt-10 flex flex-wrap items-center justify-center gap-4">
+        <PaintedNails />
+
+        <div className="animate-fade-up-delay-2 mt-8 flex flex-wrap items-center justify-center gap-4">
           <a
-            href={siteConfig.links.whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-2xl bg-crimson px-7 py-3.5 text-base font-semibold text-cream shadow-[0_12px_32px_rgba(196,59,78,0.3)] transition-transform duration-300 hover:-translate-y-1"
+            href="#reserva"
+            className="rounded-2xl bg-crimson px-7 py-3.5 text-base font-semibold text-cream shadow-[0_12px_32px_rgba(196,59,78,0.45)] transition-transform duration-300 hover:-translate-y-1"
           >
-            Reservar por WhatsApp
+            Reservar cita
           </a>
           <a
-            href="#servicios"
-            className="rounded-2xl border border-rose/30 bg-cream/60 px-7 py-3.5 text-base font-semibold text-ink backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1"
+            href="#disenos"
+            className="rounded-2xl border border-cream/40 bg-cream/15 px-7 py-3.5 text-base font-semibold text-cream backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1"
           >
-            Ver servicios
+            Ver diseños
           </a>
         </div>
       </div>
