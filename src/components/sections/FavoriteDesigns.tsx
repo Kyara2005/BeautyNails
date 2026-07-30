@@ -51,7 +51,7 @@ const designs: {
     category: "acrilicas",
     title: "Stiletto soft",
     description: "Forma alargada con tip en contraste.",
-    image: assets.hero.nails,
+    image: assets.gallery.softunas,
   },
   {
     id: "acr-4",
@@ -72,7 +72,7 @@ const designs: {
     category: "softgel",
     title: "Gel flexible",
     description: "Look limpio para el día a día.",
-    image: assets.designs.minimal,
+    image: assets.designs.softgel,
   },
   {
     id: "sg-3",
@@ -128,7 +128,7 @@ const designs: {
     category: "francesas",
     title: "French rosa",
     description: "Variación suave y moderna.",
-    image: assets.gallery[3],
+    image: assets.gallery[4],
   },
   {
     id: "fr-3",
@@ -149,7 +149,7 @@ const designs: {
     category: "cateye",
     title: "Cat eye rose",
     description: "Destello magnético dusty rose.",
-    image: assets.designs.cateye,
+    image: assets.gallery[6],
   },
   {
     id: "ce-2",
@@ -163,14 +163,14 @@ const designs: {
     category: "cateye",
     title: "Cat eye night",
     description: "Efecto oscuro con brillo móvil.",
-    image: assets.services.acrylic,
+    image: assets.gallery[7],
   },
   {
     id: "ce-4",
     category: "cateye",
     title: "Cat eye soft",
     description: "Versión suave en tonos mauve.",
-    image: assets.hero.nails,
+    image: assets.gallery[8],
   },
   {
     id: "mi-1",

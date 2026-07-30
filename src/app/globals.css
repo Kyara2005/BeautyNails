@@ -28,8 +28,9 @@
   --color-ink: var(--ink);
   --color-ink-muted: var(--ink-muted);
   --color-cream: var(--cream);
-  --font-sans: var(--font-raleway);
-  --font-display: var(--font-raleway);
+  --font-sans: var(--font-raleway), "Raleway", sans-serif;
+  --font-display: var(--font-raleway), "Raleway", sans-serif;
+  --font-mono: var(--font-raleway), "Raleway", sans-serif;
 }
 
 * {
@@ -38,13 +39,23 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: var(--font-raleway), "Raleway", sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-raleway), system-ui, sans-serif;
+  font-family: var(--font-raleway), "Raleway", sans-serif;
   overflow-x: hidden;
+}
+
+button,
+input,
+textarea,
+select,
+optgroup,
+option {
+  font-family: inherit;
 }
 
 ::selection {
@@ -613,7 +624,7 @@ html.polish-cursor-on * {
   border-radius: 1.25rem;
   background: var(--crimson);
   color: var(--cream);
-  font-family: var(--font-raleway), system-ui, sans-serif;
+  font-family: inherit;
   font-size: clamp(1.05rem, 2.5vw, 1.25rem);
   font-weight: 700;
   padding: 1.1rem 1.5rem;
@@ -639,7 +650,7 @@ html.polish-cursor-on * {
   border-radius: 1.5rem;
   background: linear-gradient(135deg, #c43b4e 0%, #a67b82 100%);
   color: var(--cream);
-  font-family: var(--font-raleway), system-ui, sans-serif;
+  font-family: inherit;
   font-size: clamp(1.15rem, 3vw, 1.45rem);
   font-weight: 700;
   padding: 1.15rem 2rem;

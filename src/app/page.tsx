@@ -1,15 +1,16 @@
-import { Header, Hero } from "@/components/Hero";
-import { AboutStudio } from "@/components/AboutStudio";
-import { FavoriteDesigns } from "@/components/FavoriteDesigns";
-import { Services } from "@/components/Services";
-import { Treatments } from "@/components/Treatments";
-import { InteractiveVideo } from "@/components/InteractiveVideo";
-import { Gallery } from "@/components/Gallery";
-import { Testimonials } from "@/components/Testimonials";
-import { BookingForm } from "@/components/BookingForm";
-import { VisitSection } from "@/components/VisitSection";
-import { Footer } from "@/components/Footer";
-import { PolishCursor } from "@/components/PolishCursor";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { PolishCursor } from "@/components/layout/PolishCursor";
+import { Hero } from "@/components/sections/Hero";
+import { AboutStudio } from "@/components/sections/AboutStudio";
+import { FavoriteDesigns } from "@/components/sections/FavoriteDesigns";
+import { Services } from "@/components/sections/Services";
+import { Treatments } from "@/components/sections/Treatments";
+import { InteractiveVideo } from "@/components/sections/InteractiveVideo";
+import { Gallery } from "@/components/sections/Gallery";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { BookingForm } from "@/components/sections/BookingForm";
+import { VisitSection } from "@/components/sections/VisitSection";
 
 export default function Home() {
   return (
